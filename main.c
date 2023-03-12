@@ -254,6 +254,7 @@ void shell()
 
 int main()
 {
+    fclose(fopen(logFile, "w"));
     signal(SIGCHLD, on_child_exit); // register child signal
     setup_environment();
     shell();
